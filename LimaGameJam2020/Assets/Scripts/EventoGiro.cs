@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Giro : MonoBehaviour
+public class EventoGiro : MonoBehaviour
 {
     public int verificador;
+
     public int vuelta;
 
     private float anguloActual;
     private float angulocomparar;
 
-    private bool derecha = true;
 
     // Start is called before the first frame update
     void Start()
@@ -29,30 +29,21 @@ public class Giro : MonoBehaviour
 
         if (anguloActual > angulocomparar)
         {
-            derecha = true;
-            if (verificador < 0) verificador = 0;
             verificador++;
-        }
-        else if (anguloActual == angulocomparar)
-        {
-            verificador = 0;
+            if (verificador < -5) vuelta--;
+            if (verificador < 0) verificador = 0;
         }
         else if (anguloActual < angulocomparar) //Giro opuesto
         {
-            if (verificador > 5)
-                vuelta++;
-
-            if (verificador > 0) verificador = 0;
             verificador--;
+            if (verificador > 5) vuelta++;
+            if (verificador > 0) verificador = 0;
         }
 
+    }
 
-
-
-
-
-
-
-
+    public void ReiniciarVeulta()
+    {
+        vuelta = 0;
     }
 }
