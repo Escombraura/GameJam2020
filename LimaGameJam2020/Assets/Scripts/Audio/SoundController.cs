@@ -11,7 +11,14 @@ public static class SoundController
     {
         soundManager = _soundManager;
         volume = 1;
-        soundManager.MusicaDeFondo.volume = volume;
+        //Eliminar para no reproducir al inicio automaticamente
+        PlayBackGroundMusic();
+    }
+
+    public static void PlayBackGroundMusic()
+    {
+        soundManager.MusicaDeFondo.clip = soundManager.backgroundClips[1];
+        soundManager.MusicaDeFondo.volume = 0.9f;
         soundManager.MusicaDeFondo.Play();
     }
 
@@ -37,5 +44,19 @@ public static class SoundController
         volume = -_value;
     }
 
+    public static void PlayOtherSoundEfect(int _value)
+    {
+        GameObject _objeto = Object.Instantiate(soundManager.efectoExtra);
+        _objeto.transform.SetParent(soundManager.gameObject.transform);
+        AudioSource _miAudio = _objeto.GetComponent<AudioSource>();
 
+        if (_value >= soundManager.audioClips.Length) return;
+
+        _miAudio.clip = soundManager.audioClips[_value];
+        _miAudio.volume = volume;
+        _miAudio.Play();
+    }
 }
+
+
+
