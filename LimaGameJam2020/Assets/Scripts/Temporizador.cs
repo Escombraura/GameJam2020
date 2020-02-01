@@ -8,6 +8,7 @@ public static class Temporizador
     public static float time = 0f;
     public static bool active = false;
     public static bool ready = false;
+    public static int stage = 0;
 
 
 
@@ -22,6 +23,12 @@ public static class Temporizador
     public static void Finish()
     {
         ready = false;
+        stage++;
+    }
+
+    public static void EndMesh()
+    {
+        stage = 0;
     }
 
 
