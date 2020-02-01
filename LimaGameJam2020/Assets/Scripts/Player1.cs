@@ -64,10 +64,13 @@ public class Player1 : MonoBehaviour {
 
     void OnTriggerStay2D (Collider2D other) {
         //Verifica que el objeto es agarrable xD
-        if (other.tag == "Objeto" && ControladorMando.PressA ()  && hijo == null) {
+        if (other.tag == "Objeto") {
             Debug.Log ("cogible");
-            hijo = other.transform;
-            hijo.parent = transform;
+            if (ControladorMando.PressA () && hijo == null) {
+                // Debug.Log ("cogible");
+                hijo = other.transform;
+                hijo.parent = transform;
+            }
         }
     }
 
