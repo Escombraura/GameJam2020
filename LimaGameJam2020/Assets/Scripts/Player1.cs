@@ -78,7 +78,7 @@ public class Player1 : MonoBehaviour
         //Verifica que el objeto es agarrable xD
         if (other.tag == "Objeto")
         {
-            Debug.Log("cogible");
+            //Debug.Log("cogible");
             if (ControladorMando.PressRT() == 1 && hijo == null)
             {
                 // Debug.Log ("cogible");

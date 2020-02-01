@@ -25,7 +25,7 @@ public class EventoGiro : MonoBehaviour {
     void Update () {
         if (tiempoLimite - Time.deltaTime > 0) {
             tiempoLimite -= Time.deltaTime;
-            if (ControladorMando.LeftJoystick () == Vector2.zero) return;
+            if (ControladorMando.RightJoystick () == Vector2.zero) return;
 
             anguloActual = transform.eulerAngles.z;
             transform.rotation = Quaternion.Euler (0, 0, Mathf.Atan2 (-ControladorMando.RightJoystick ().x, ControladorMando.RightJoystick ().y) * 180 / Mathf.PI);

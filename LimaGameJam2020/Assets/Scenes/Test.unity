@@ -439,7 +439,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!1 &453885103
@@ -1117,7 +1117,7 @@ MonoBehaviour:
   vuelta: 0
   tiempoLimite: 5
   falla: 0
-  objetivo: 10
+  objetivo: 25
   slider: {fileID: 1914717458}
 --- !u!4 &1408273805
 Transform:
@@ -2206,7 +2206,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 851045586}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 10
+  m_MaxValue: 25
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
