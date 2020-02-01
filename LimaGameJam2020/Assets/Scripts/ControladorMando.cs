@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class ControladorMando
 {
- 
+
     public static bool PressX()
     {
         return Input.GetButtonDown("x Button");
@@ -54,5 +54,10 @@ public static class ControladorMando
         float v = Input.GetAxis("Vertical2");
 
         return new Vector2(h, v);
+    }
+
+    public static float PressRT()
+    {
+        return Input.GetAxis("RT");
     }
 }
