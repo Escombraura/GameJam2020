@@ -6,21 +6,19 @@ public class Pintador : MonoBehaviour
 {
     public Transform[] jugadores;
     public Color[] colores;
+    public Sprite[] listaSprite;
     public Colores miColor;
     public int indice;
+    private SpriteRenderer miSprite;
 
 
     // Start is called before the first frame update
     void Start()
     {
         indice = Random.Range(0, 6);
-        GetComponent<SpriteRenderer>().color = SetColor(indice);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        miSprite = GetComponent<SpriteRenderer>();
+        //SetSprite(indice); //Cambiar al momento de usar sprites y no colores
+        miSprite.color = SetColor(indice);
     }
 
     public Color SetColor(Colores _color)
@@ -36,9 +34,14 @@ public class Pintador : MonoBehaviour
         }
     }
 
-    public Color SetColor(int _color)
+    public void SetSprite(int _value)
     {
-        switch (_color)
+        miSprite.sprite = listaSprite[_value];
+    }
+
+    public Color SetColor(int _value)
+    {
+        switch (_value)
         {
             case 0: miColor = Colores.Rojo; break;
             case 1: miColor = Colores.Morado; break;
@@ -47,8 +50,7 @@ public class Pintador : MonoBehaviour
             case 4: miColor = Colores.Amarillo; break;
             default: miColor = Colores.Naranja; break;
         }
-
-        return colores[_color];
+        return colores[_value];
     }
 }
 
