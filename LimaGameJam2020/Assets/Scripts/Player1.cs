@@ -7,6 +7,8 @@ public class Player1 : MonoBehaviour {
     public Transform robot;
     public Transform eventoGiro;
     private EventoGiro accesoGiro;
+    public Transform eventoPresion;
+    private EventoPresionar accesoPresion;
     public float velocidad;
     public bool background = false;
     private Transform hijo;
@@ -14,6 +16,7 @@ public class Player1 : MonoBehaviour {
     // Start is called before the first frame update
     void Start () {
         if (eventoGiro) accesoGiro = eventoGiro.GetComponent<EventoGiro> ();
+        if (eventoPresion) accesoPresion = eventoPresion.GetComponent<EventoPresionar> ();
     }
 
     // Update is called once per frame
@@ -27,8 +30,15 @@ public class Player1 : MonoBehaviour {
             if (enRobot && robot.GetChild (0).childCount == 0) {
                 hijo.parent = robot.GetChild (0);
                 hijo.transform.localPosition = Vector3.zero;
+                hijo.gameObject.name = "brazo";
                 hijo = null;
                 ComenzarGirar ();
+            } else if (enRobot && robot.GetChild (1).childCount == 0) {
+                hijo.parent = robot.GetChild (1);
+                hijo.transform.localPosition = Vector3.zero;
+                hijo.gameObject.name = "pierna";
+                hijo = null;
+                ComenzarPresionar ();
             } else {
                 hijo.parent = null;
                 hijo = null;
@@ -45,9 +55,17 @@ public class Player1 : MonoBehaviour {
         // }
     }
 
+    public void ComenzarPresionar () {
+        background = true;
+        eventoPresion.gameObject.SetActive (true);
+        GetComponent<SpriteRenderer> ().enabled = false;
+        StartCoroutine (FinalizarPresion ());
+    }
+
     void OnTriggerStay2D (Collider2D other) {
         //Verifica que el objeto es agarrable xD
         if (other.tag == "Objeto" && ControladorMando.PressA () && hijo == null) {
+            Debug.Log ("cogible");
             hijo = other.transform;
             hijo.parent = transform;
         }
@@ -69,10 +87,24 @@ public class Player1 : MonoBehaviour {
         } while (accesoGiro.vuelta != accesoGiro.objetivo);
         if (accesoGiro.falla) {
             eventoGiro.gameObject.SetActive (false);
-            robot.GetChild (0).gameObject.SetActive (false);
-            robot.GetChild (0).transform.parent = null;
+            robot.GetChild (0).transform.Find ("brazo").gameObject.SetActive (false);
+            robot.GetChild (0).transform.Find ("brazo").transform.parent = null;
         }
         eventoGiro.gameObject.SetActive (false);
+        GetComponent<SpriteRenderer> ().enabled = true;
+        background = false;
+    }
+
+    IEnumerator FinalizarPresion () {
+        do {
+            yield return new WaitForSeconds (0.1f);
+        } while (accesoPresion.resta != 0);
+        if (accesoPresion.falla) {
+            eventoPresion.gameObject.SetActive (false);
+            robot.GetChild (1).transform.Find ("pierna").gameObject.SetActive (false);
+            robot.GetChild (1).transform.Find ("pierna").transform.parent = null;
+        }
+        eventoPresion.gameObject.SetActive (false);
         GetComponent<SpriteRenderer> ().enabled = true;
         background = false;
     }

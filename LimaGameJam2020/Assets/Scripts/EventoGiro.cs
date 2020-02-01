@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EventoGiro : MonoBehaviour {
     public int verificador;
@@ -12,6 +13,8 @@ public class EventoGiro : MonoBehaviour {
     public float tiempoLimite;
     public bool falla;
     public float objetivo;
+
+    public Slider slider;
 
     // Start is called before the first frame update
     void Start () {
@@ -38,6 +41,7 @@ public class EventoGiro : MonoBehaviour {
                 if (verificador > 5) vuelta++;
                 if (verificador > 0) verificador = 0;
             }
+            slider.value = vuelta;
         } else { falla = true; vuelta = (int) objetivo; return; }
     }
 
