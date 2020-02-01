@@ -130,9 +130,9 @@ GameObject:
   m_Component:
   - component: {fileID: 435271495}
   - component: {fileID: 435271494}
-  - component: {fileID: 435271496}
   - component: {fileID: 435271497}
   - component: {fileID: 435271498}
+  - component: {fileID: 435271496}
   m_Layer: 0
   m_Name: Garra
   m_TagString: Untagged
@@ -212,11 +212,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 435271493}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b65ed796bf97fd45b79d7fb564252fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 187e8ac7092efc543bab238559800b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  robot: {fileID: 1512897586}
-  eventoGiro: {fileID: 1408273805}
+  robot: {fileID: 0}
+  eventoGiro: {fileID: 0}
+  ID: 
+  score: 0
   eventoPresion: {fileID: 0}
   velocidad: 2
   background: 0
@@ -688,6 +690,7 @@ MonoBehaviour:
   tiempoLimite: 10
   falla: 0
   objetivo: 10
+  ID: 
   slider: {fileID: 0}
 --- !u!4 &1408273805
 Transform:
@@ -977,6 +980,7 @@ MonoBehaviour:
   resta: 10
   tiempoLimite: 0
   falla: 0
+  ID: 
   slider: {fileID: 0}
 --- !u!4 &1518235062
 Transform:

@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player1 : MonoBehaviour
+public class Player : MonoBehaviour
 {
-    /*
+
     public Transform robot;
     public Transform eventoGiro;
+    public string ID;
+    public int score;
     private EventoGiro accesoGiro;
     public Transform eventoPresion;
     private EventoPresionar accesoPresion;
@@ -25,10 +27,10 @@ public class Player1 : MonoBehaviour
     void Update()
     {
         //Pos te mueves
-        if (background != true) transform.Translate(new Vector3(ControladorMando.LeftJoystick().x, ControladorMando.LeftJoystick().y, 0) * Time.deltaTime * velocidad);
+        if (background != true) transform.Translate(new Vector3(ControladorMando.LeftJoystick(ID).x, ControladorMando.LeftJoystick(ID).y, 0) * Time.deltaTime * velocidad);
 
         //Soltar objeto
-        if (ControladorMando.PressRT() < 1 && hijo != null)
+        if (ControladorMando.PressRT(ID) < 1 && hijo != null)
         {
             //Verficia si estas encima del robot y si ya hay un objeto soldado
             if (enRobot && robot.GetChild(0).childCount == 0)
@@ -79,7 +81,7 @@ public class Player1 : MonoBehaviour
         if (other.tag == "Objeto")
         {
             //Debug.Log("cogible");
-            if (ControladorMando.PressRT() == 1 && hijo == null)
+            if (ControladorMando.PressRT(ID) == 1 && hijo == null)
             {
                 // Debug.Log ("cogible");
                 hijo = other.transform;
@@ -133,5 +135,4 @@ public class Player1 : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = true;
         background = false;
     }
-    */
 }

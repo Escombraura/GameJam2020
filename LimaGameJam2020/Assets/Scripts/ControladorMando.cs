@@ -5,59 +5,59 @@ using UnityEngine;
 public static class ControladorMando
 {
 
-    public static bool PressX()
+    public static bool PressX(string _jugador)
     {
-        return Input.GetButtonDown("x Button");
+        return Input.GetButtonDown(_jugador + "x Button");
     }
-    public static bool ReleaseButtonX()
+    public static bool ReleaseButtonX(string _jugador)
     {
-        return Input.GetButtonUp("x Button");
+        return Input.GetButtonUp(_jugador + "x Button");
     }
-    public static bool PressY()
+    public static bool PressY(string _jugador)
     {
-        return Input.GetButtonDown("y Button");
+        return Input.GetButtonDown(_jugador + "y Button");
     }
-    public static bool ReleaseButtonY()
+    public static bool ReleaseButtonY(string _jugador)
     {
-        return Input.GetButtonUp("y Button");
+        return Input.GetButtonUp(_jugador + "y Button");
     }
-    public static bool PressA()
+    public static bool PressA(string _jugador)
     {
-        return Input.GetButtonDown("a Button");
-    }
-
-    public static bool ReleaseButtonA()
-    {
-        return Input.GetButtonUp("a Button");
-    }
-    public static bool PressB()
-    {
-        return Input.GetButtonDown("b Button");
+        return Input.GetButtonDown(_jugador + "a Button");
     }
 
-    public static bool ReleaseButtonB()
+    public static bool ReleaseButtonA(string _jugador)
     {
-        return Input.GetButtonUp("b Button");
+        return Input.GetButtonUp(_jugador + "a Button");
+    }
+    public static bool PressB(string _jugador)
+    {
+        return Input.GetButtonDown(_jugador + "b Button");
     }
 
-    public static Vector2 LeftJoystick()
+    public static bool ReleaseButtonB(string _jugador)
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-
-        return new Vector2(h, v);
+        return Input.GetButtonUp(_jugador + "b Button");
     }
 
-    public static Vector2 RightJoystick()
+    public static Vector2 LeftJoystick(string _jugador)
     {
-        float h = Input.GetAxis("Horizontal2");
-        float v = Input.GetAxis("Vertical2");
+        float h = Input.GetAxis(_jugador + "Horizontal");
+        float v = Input.GetAxis(_jugador + "Vertical");
 
         return new Vector2(h, v);
     }
 
-    public static float PressRT()
+    public static Vector2 RightJoystick(string _jugador)
     {
-        return Input.GetAxis("RT");
+        float h = Input.GetAxis(_jugador + "Horizontal2");
+        float v = Input.GetAxis(_jugador + "Vertical2");
+
+        return new Vector2(h, v);
+    }
+
+    public static float PressRT(string _jugador)
+    {
+        return Input.GetAxis(_jugador + "RT");
     }
 }
