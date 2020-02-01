@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TestBehaviour : MonoBehaviour {
+public class TestBehaviour : MonoBehaviour
+{
     Vector2 JoystickVector;
     public float angleCurrent = 0;
     public float anglePrevious = 0;
@@ -16,12 +17,14 @@ public class TestBehaviour : MonoBehaviour {
     public int lastQuadrant = 0;
     public float decayRate = 1;
     // Start is called before the first frame update
-    void Start () {
+    void Start()
+    {
 
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
         // if (ControladorMando.mando.LeftJoystick () != Vector2.zero) {
         //     sign = Mathf.Sign (ControladorMando.mando.LeftJoystick ().y);
         //     offset = sign == 1 ? 0 : 360;
@@ -52,17 +55,18 @@ public class TestBehaviour : MonoBehaviour {
         // }
         // anglePrevious = angleCurrent;
 
-        if (ControladorMando.mando.LeftJoystick () != Vector2.zero) {
-            sign = Mathf.Sign (ControladorMando.mando.LeftJoystick ().y);
+        if (ControladorMando.LeftJoystick() != Vector2.zero)
+        {
+            sign = Mathf.Sign(ControladorMando.LeftJoystick().y);
             offset = sign == 1 ? 0 : 360;
-            JoystickVector = ControladorMando.mando.LeftJoystick ();
-            angleCurrent = Vector2.Angle (Vector2.left, JoystickVector) * sign + offset;
-            transform.rotation = Quaternion.Euler (0, 0, angleCurrent);
+            JoystickVector = ControladorMando.LeftJoystick();
+            angleCurrent = Vector2.Angle(Vector2.left, JoystickVector) * sign + offset;
+            transform.rotation = Quaternion.Euler(0, 0, angleCurrent);
 
             if (angleCurrent > 29.95f && anglePrevious < 30) { roundCount++; }
             anglePrevious = angleCurrent;
 
-            roundCount - 1 * Time.deltaTime * decayRate;
+            //roundCount - 1 * Time.deltaTime * decayRate;
         }
     }
 }

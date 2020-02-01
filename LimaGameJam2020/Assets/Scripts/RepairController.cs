@@ -5,7 +5,6 @@ using UnityEngine;
 public class RepairController : MonoBehaviour
 {
 
-    public ControladorMando controladorMando;
     public Transform robot;
 
     public float velocidad;
@@ -23,10 +22,10 @@ public class RepairController : MonoBehaviour
     void Update()
     {
         //Pos te mueves
-        transform.Translate(new Vector3(controladorMando.LeftJoystick().x, controladorMando.LeftJoystick().y, 0) * Time.deltaTime * velocidad);
+        transform.Translate(new Vector3(ControladorMando.LeftJoystick().x, ControladorMando.LeftJoystick().y, 0) * Time.deltaTime * velocidad);
 
         //Soltar objeto
-        if (controladorMando.ReleaseButtonA() && hijo != null)
+        if (ControladorMando.ReleaseButtonA() && hijo != null)
         {
             //Verficia si estas encima del robot y si ya hay un objeto soldado
             if (enRobot && robot.GetChild(0).childCount == 0)
@@ -47,7 +46,7 @@ public class RepairController : MonoBehaviour
     void OnTriggerStay2D(Collider2D other)
     {
         //Verifica que el objeto es agarrable xD
-        if (other.tag == "Objeto" && controladorMando.PressA() && hijo == null)
+        if (other.tag == "Objeto" && ControladorMando.PressA() && hijo == null)
         {
             hijo = other.transform;
             hijo.parent = transform;

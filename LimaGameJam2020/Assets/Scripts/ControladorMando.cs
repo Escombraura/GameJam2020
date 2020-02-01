@@ -2,71 +2,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControladorMando : MonoBehaviour
+public static class ControladorMando
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-        if (PressX())
-            Debug.Log("X");
-
-        if (PressY())
-            Debug.Log("y");
-        if (PressA())
-            Debug.Log("A");
-        if (PressB())
-            Debug.Log("B");
-
-        Debug.Log(LeftJoystick());
-
-        Debug.Log(RightJoystick());
-
-
-    }
-
-    public bool PressX()
+ 
+    public static bool PressX()
     {
         return Input.GetButtonDown("x Button");
     }
-    public bool ReleaseButtonX()
+    public static bool ReleaseButtonX()
     {
         return Input.GetButtonUp("x Button");
     }
-    public bool PressY()
+    public static bool PressY()
     {
         return Input.GetButtonDown("y Button");
     }
-    public bool ReleaseButtonY()
+    public static bool ReleaseButtonY()
     {
         return Input.GetButtonUp("y Button");
     }
-    public bool PressA()
+    public static bool PressA()
     {
         return Input.GetButtonDown("a Button");
     }
 
-    public bool ReleaseButtonA()
+    public static bool ReleaseButtonA()
     {
         return Input.GetButtonUp("a Button");
     }
-    public bool PressB()
+    public static bool PressB()
     {
         return Input.GetButtonDown("b Button");
     }
 
-    public bool ReleaseButtonB()
+    public static bool ReleaseButtonB()
     {
         return Input.GetButtonUp("b Button");
     }
 
-    public Vector2 LeftJoystick()
+    public static Vector2 LeftJoystick()
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
@@ -74,7 +48,7 @@ public class ControladorMando : MonoBehaviour
         return new Vector2(h, v);
     }
 
-    public Vector2 RightJoystick()
+    public static Vector2 RightJoystick()
     {
         float h = Input.GetAxis("Horizontal2");
         float v = Input.GetAxis("Vertical2");
