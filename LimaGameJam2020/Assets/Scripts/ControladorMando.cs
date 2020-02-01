@@ -35,17 +35,35 @@ public class ControladorMando : MonoBehaviour
     {
         return Input.GetButtonDown("x Button");
     }
+    public bool ReleaseButtonX()
+    {
+        return Input.GetButtonUp("x Button");
+    }
     public bool PressY()
     {
         return Input.GetButtonDown("y Button");
+    }
+    public bool ReleaseButtonY()
+    {
+        return Input.GetButtonUp("y Button");
     }
     public bool PressA()
     {
         return Input.GetButtonDown("a Button");
     }
+
+    public bool ReleaseButtonA()
+    {
+        return Input.GetButtonUp("a Button");
+    }
     public bool PressB()
     {
         return Input.GetButtonDown("b Button");
+    }
+
+    public bool ReleaseButtonB()
+    {
+        return Input.GetButtonUp("b Button");
     }
 
     public Vector2 LeftJoystick()
