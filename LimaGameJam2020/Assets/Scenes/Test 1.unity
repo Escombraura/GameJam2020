@@ -217,6 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   robot: {fileID: 1512897586}
   eventoGiro: {fileID: 1408273805}
+  eventoPresion: {fileID: 0}
   velocidad: 2
   background: 0
 --- !u!61 &435271497
@@ -687,6 +688,7 @@ MonoBehaviour:
   tiempoLimite: 10
   falla: 0
   objetivo: 10
+  slider: {fileID: 0}
 --- !u!4 &1408273805
 Transform:
   m_ObjectHideFlags: 0
@@ -973,6 +975,9 @@ MonoBehaviour:
   valorActual: 0
   adicion: 0.8
   resta: 10
+  tiempoLimite: 0
+  falla: 0
+  slider: {fileID: 0}
 --- !u!4 &1518235062
 Transform:
   m_ObjectHideFlags: 0

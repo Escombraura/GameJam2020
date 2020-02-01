@@ -337,9 +337,9 @@ InputManager:
     dead: 0.19
     sensitivity: 1
     snap: 1
-    invert: 0
+    invert: 1
     type: 2
-    axis: 1
+    axis: 4
     joyNum: 2
   - serializedVersion: 3
     m_Name: 3PVertical
@@ -353,9 +353,9 @@ InputManager:
     dead: 0.19
     sensitivity: 1
     snap: 1
-    invert: 0
+    invert: 1
     type: 2
-    axis: 1
+    axis: 4
     joyNum: 3
   - serializedVersion: 3
     m_Name: 4PVertical
@@ -369,9 +369,9 @@ InputManager:
     dead: 0.19
     sensitivity: 1
     snap: 1
-    invert: 0
+    invert: 1
     type: 2
-    axis: 1
+    axis: 4
     joyNum: 4
   - serializedVersion: 3
     m_Name: 2PVertical2

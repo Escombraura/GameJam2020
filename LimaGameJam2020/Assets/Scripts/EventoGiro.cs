@@ -28,7 +28,7 @@ public class EventoGiro : MonoBehaviour {
             if (ControladorMando.LeftJoystick () == Vector2.zero) return;
 
             anguloActual = transform.eulerAngles.z;
-            transform.rotation = Quaternion.Euler (0, 0, Mathf.Atan2 (-ControladorMando.LeftJoystick ().x, ControladorMando.LeftJoystick ().y) * 180 / Mathf.PI);
+            transform.rotation = Quaternion.Euler (0, 0, Mathf.Atan2 (-ControladorMando.RightJoystick ().x, ControladorMando.RightJoystick ().y) * 180 / Mathf.PI);
             angulocomparar = transform.eulerAngles.z;
 
             if (anguloActual > angulocomparar) {
