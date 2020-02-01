@@ -14,6 +14,7 @@ public class TestBehaviour : MonoBehaviour {
     public bool canAdd = false;
     public int quadrant = 0;
     public int lastQuadrant = 0;
+    public float decayRate = 1;
     // Start is called before the first frame update
     void Start () {
 
@@ -60,6 +61,8 @@ public class TestBehaviour : MonoBehaviour {
 
             if (angleCurrent > 29.95f && anglePrevious < 30) { roundCount++; }
             anglePrevious = angleCurrent;
+
+            roundCount - 1 * Time.deltaTime * decayRate;
         }
     }
 }
