@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Objeto
   - Robot
+  - Jugador
+  - Jugador2P
+  - Jugador3P
+  - Jugador4P
   layers:
   - Default
   - TransparentFX
