@@ -34,7 +34,7 @@ public class Player : MonoBehaviour {
                 hijo.transform.localPosition = Vector3.zero;
                 hijo.gameObject.name = "brazo";
                 hijo = null;
-                ComenzarPresionar ();
+                ComenzarGirar ();
             } else if (enRobot && robot.Find ("Pieza" + ID).childCount == 0) {
                 hijo.parent = robot.Find ("Pieza" + ID);
                 hijo.transform.localPosition = Vector3.zero;
@@ -91,8 +91,8 @@ public class Player : MonoBehaviour {
         } while (accesoGiro.vuelta != accesoGiro.objetivo);
         if (accesoGiro.falla) {
             eventoGiro.gameObject.SetActive (false);
-            robot.Find ("Pieza"+ID).transform.Find ("brazo").gameObject.SetActive (false);
-            robot.Find ("Pieza"+ID).transform.Find ("brazo").transform.parent = null;
+            robot.Find ("Pieza" + ID).transform.Find ("brazo").gameObject.SetActive (false);
+            robot.Find ("Pieza" + ID).transform.Find ("brazo").transform.parent = null;
         }
         eventoGiro.gameObject.SetActive (false);
         GetComponent<SpriteRenderer> ().enabled = true;
@@ -105,8 +105,8 @@ public class Player : MonoBehaviour {
         } while (accesoPresion.resta != 0);
         if (accesoPresion.falla) {
             eventoPresion.gameObject.SetActive (false);
-            robot.Find ("Pieza"+ID).transform.Find ("pierna").gameObject.SetActive (false);
-            robot.Find ("Pieza"+ID).transform.Find ("pierna").transform.parent = null;
+            robot.Find ("Pieza" + ID).transform.Find ("pierna").gameObject.SetActive (false);
+            robot.Find ("Pieza" + ID).transform.Find ("pierna").transform.parent = null;
         }
         eventoPresion.gameObject.SetActive (false);
         GetComponent<SpriteRenderer> ().enabled = true;
