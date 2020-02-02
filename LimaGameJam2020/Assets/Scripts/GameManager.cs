@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour {
             if (RobotActual.transform.position != puntoAparicion.position) {
                 RobotActual.transform.position = Vector3.Lerp (RobotActual.transform.position, puntoAparicion.position, Time.deltaTime);
                 if (puntoAparicion.position.y - RobotActual.transform.position.y < 0.5) {
-                    RobotActual = null;
+                    Destroy (RobotActual);
                     //llamar temporizador
                     //Invoke("InitRobot", 5f);
                     if (temporizador.GetStage () == 2) {

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour {
     public Transform hijo;
     public bool enRobot = false;
     private GameManager gmManager;
+    public Text texto;
     // Start is called before the first frame update
     void Start () {
         // if (eventoGiro) accesoGiro = eventoGiro.GetComponent<EventoGiro> ();
@@ -39,7 +41,7 @@ public class Player : MonoBehaviour {
                 SoundController.PlayOtherSoundEfect (Random.Range (4, 7));
 
                 hijo.parent = robot.Find ("Pieza" + ID);
-                hijo.transform.GetChild (0).transform.localPosition = robot.Find ("Pieza" + ID).transform.position;
+                hijo.transform.GetChild (0).transform.position = robot.Find ("Pieza" + ID).transform.position;
                 hijo.gameObject.name = ("Ext" + ID);
                 hijo = null;
                 objetoEvento = Instantiate (eventos[eventID]).transform;
@@ -72,7 +74,8 @@ public class Player : MonoBehaviour {
     void OnTriggerStay2D (Collider2D other) {
         //Verifica que el objeto es agarrable xD
         if (other.tag == "Objeto") {
-            if (ControladorMando.PressRT (ID) == 1 && hijo == null && other.transform.parent.tag != "Jugador" + ID) {
+            if (ControladorMando.PressRT (ID) == 1 && hijo == null) {
+                if (other.transform.parent && other.transform.parent.tag == "Jugador" + ID) return;
                 SoundController.PlayOtherSoundEfect (9);
                 hijo = other.transform;
                 hijo.parent = transform;
