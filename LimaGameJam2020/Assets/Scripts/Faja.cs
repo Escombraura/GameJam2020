@@ -9,8 +9,16 @@ public class Faja : MonoBehaviour
     public float velocidad = 0.5f;
 
 
+
+
     void Update()
     {
+        /*
+        if (transform.childCount >= 1)
+        {
+            transform.GetChild(0).transform.rotation
+        }
+        */
 
         transform.Translate(Vector3.right * Time.deltaTime * velocidad);
         //ChildLookAt2D();

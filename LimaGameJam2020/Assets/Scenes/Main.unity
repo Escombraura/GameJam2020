@@ -1269,7 +1269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e457f6924b1593a4a9e03ffca97b69f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ruta: 3
+  ruta: 2
   llegada: {fileID: 1969719110}
   velocidad: 0.5
 --- !u!1001 &412372342
