@@ -166,6 +166,7 @@ public class Player : MonoBehaviour
         score += 5;
         Pintador _piezaSeleccionada = robot.Find("Pieza" + ID).GetComponentInChildren<Pintador>();
         ColoScore(_piezaSeleccionada);
+        RobotScore(_piezaSeleccionada);
     }
 
     private void ColoScore(Pintador _piezaSeleccionada)
