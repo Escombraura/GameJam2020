@@ -133,9 +133,34 @@ public class Player : MonoBehaviour
                 background = false;
                 break;
         }
+
+        AddScore();
+
+
         feedBack[eventID].transform.Find(ID + "FeedBack").gameObject.SetActive(false);
         SetEvent();
+    }
 
+    private void AddScore()
+    {
+        score += 5;
+        int _robotIndice = robot.GetComponent<Pintador>().indice;
+        int _piezaIndice = 0;
+
+        switch (eventID)
+        {
+            case 0: _piezaIndice = robot.Find("Pieza" + ID).GetComponentInChildren<Pintador>().indice; break;
+            case 1: _piezaIndice = robot.Find("Pieza" + ID).GetComponentInChildren<Pintador>().indice; break;
+        }
+
+        int _resultado = Mathf.Abs(_robotIndice - _piezaIndice);
+
+        switch (_resultado)
+        {
+            case 0: score += 5; break;
+            case 1: score += 1; break;
+            case 3: score += 3; break;
+        }
 
 
     }
