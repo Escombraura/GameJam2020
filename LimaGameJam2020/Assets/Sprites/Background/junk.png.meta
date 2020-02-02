@@ -1,7 +1,19 @@
 fileFormatVersion: 2
-guid: 4dbafb88215a5d0429ebc79b885a3d47
+guid: 34a7d266e6f33204f9a20292a9d535ea
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5621732263570787698
+    second: junk_0
+  - first:
+      213: 5984893025380405963
+    second: junk_1
+  - first:
+      213: -738330535546287017
+    second: junk_2
+  - first:
+      213: 2964553659531173844
+    second: junk_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -84,7 +96,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: junk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 174
+        width: 267
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce15c034338ef154a82541d49e36595c
+      internalID: 5621732263570787698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: junk_1
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 85
+        width: 133
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9862b924de8b23148ab683faa18fc465
+      internalID: 5984893025380405963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: junk_2
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 76
+        width: 235
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d82907eb3442140aeedafdd10b32b7
+      internalID: -738330535546287017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: junk_3
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 0
+        width: 185
+        height: 615
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e809d7ce12cbd4baf0d7b361807a60
+      internalID: 2964553659531173844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
