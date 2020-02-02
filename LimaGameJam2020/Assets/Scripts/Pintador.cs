@@ -78,5 +78,7 @@ public enum Nombre
     Bob,
     Alfred,
     Emilio,
-    Timmy
+    Timmy,
+    ninguno
+
 }
