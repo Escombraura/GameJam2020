@@ -5,7 +5,6 @@ using UnityEngine;
 public class Pintador : MonoBehaviour
 {
     public Transform[] jugadores;
-    public Color[] colores;
     public Sprite[] listaSprite;
     public Colores miColor;
     public int indice;
@@ -17,10 +16,11 @@ public class Pintador : MonoBehaviour
     {
         indice = Random.Range(0, listaSprite.Length);
         miSprite = GetComponent<SpriteRenderer>();
-        //SetSprite(indice); //Cambiar al momento de usar sprites y no colores
-        miSprite.color = SetColor(indice);
+        SetSprite(indice); //Cambiar al momento de usar sprites y no colores
+        //miSprite.color = SetColor(indice);
     }
 
+    /*
     public Color SetColor(Colores _color)
     {
         switch (_color.ToString())
@@ -33,6 +33,7 @@ public class Pintador : MonoBehaviour
             default: miColor = Colores.Naranja; return colores[5];
         }
     }
+    */
 
     public void SetSprite(int _value)
     {
