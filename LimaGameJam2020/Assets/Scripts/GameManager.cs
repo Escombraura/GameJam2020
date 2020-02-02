@@ -213,9 +213,6 @@ public class GameManager : MonoBehaviour
             {
                 if (i > j && verificadorNombre[i] != Nombre.ninguno)
                 {
-                    Debug.Log(i);
-                    Debug.Log(j);
-
                     if (verificadorColor[i] == verificadorColor[j])
                     {
                         multiplicador++;
@@ -237,7 +234,9 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+
         multiplicador = 1 + (multiplicador / 10f);
+        Debug.Log(multiplicador);
         Debug.Log(globalScore);
         globalScore = globalScore * multiplicador;
         Debug.Log(globalScore);
