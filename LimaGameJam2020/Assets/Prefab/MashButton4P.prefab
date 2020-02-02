@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5273812901362887333}
   - component: {fileID: 5273812901362887334}
   m_Layer: 0
-  m_Name: MashButton
+  m_Name: MashButton4P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,11 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3fa535cfa96cc438992f34c845cb3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  falla: 0
   objetivo: 10
+  ID: 4P
+  tiempoLimite: 70
   valorActual: 0
   adicion: 0.8
   resta: 4.5
-  tiempoLimite: 8
-  falla: 0
-  ID: 
-  slider: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3756288443057467459}
   - component: {fileID: 3756288443057467461}
   m_Layer: 0
-  m_Name: Contador Giro
+  m_Name: Contador Giro 4P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,10 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae917be811cf2d04fb0714f42bb232be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  verificador: 0
-  vuelta: 0
-  tiempoLimite: 5
   falla: 0
   objetivo: 20
-  ID: 
-  slider: {fileID: 0}
+  ID: 4P
+  tiempoLimite: 100
+  verificador: 0
+  vuelta: 0
