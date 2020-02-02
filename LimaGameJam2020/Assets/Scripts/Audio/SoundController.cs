@@ -30,13 +30,17 @@ public static class SoundController
         soundManager.efectos.volume = volume;
         soundManager.efectos.Play();
     }
-    public static void PlaSoundEfect2(int _value)
+    public static void PlaySoundEfectLoop(int _value)
     {
         if (_value >= soundManager.audioClips.Length) return;
-
         soundManager.efectos2.clip = soundManager.audioClips[_value];
         soundManager.efectos2.volume = volume;
         soundManager.efectos2.Play();
+    }
+
+    public static void StopSoundEfectLoop()
+    {
+        soundManager.efectos2.Stop();
     }
 
     public static void SetVolume(int _value)

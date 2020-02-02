@@ -30,6 +30,8 @@ public class EventoPresionar : Evento
             if (ControladorMando.PressB(ID))
             {
                 valorActual += adicion;
+                SoundController.PlayOtherSoundEfect(11);
+
                 resta = valorActual >= 10 ? 0 : resta;
             }
             //  slider.value = valorActual;
