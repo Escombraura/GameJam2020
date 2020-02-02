@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
             //timer --
             if (temporizador.GetStage() == 1)
             {
-                temporizador.Activar(3);
+                temporizador.Activar(15);
                 if (temporizador.Finish())
                 {
                     estado = GameState.finish;
