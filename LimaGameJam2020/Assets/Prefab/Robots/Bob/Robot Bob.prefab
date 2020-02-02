@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 2732258473881159511}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.2, y: 0.0075, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 2732258475007357964}
   m_RootOrder: 1
@@ -83,7 +83,7 @@ Transform:
   m_GameObject: {fileID: 2732258474170388946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.1, y: -0.135, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 2732258475007357964}
   m_RootOrder: 2
@@ -140,7 +140,7 @@ Transform:
   m_GameObject: {fileID: 2732258474361684036}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.1, y: -0.135, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 2732258475007357964}
   m_RootOrder: 3
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 2732258475007357965}
   - component: {fileID: 1418735859838778881}
   m_Layer: 0
-  m_Name: Robot (3)
+  m_Name: Robot Bob
   m_TagString: Robot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -322,7 +322,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: afddf155336f7b5428a03a4c0ff43835, type: 3}
   miColor: 0
   indice: 0
-  pieza: 4
+  piezaSimetrica: 0
+  jugadorID: 
   nombre: 3
 --- !u!1 &2732258475333746008
 GameObject:
@@ -350,7 +351,7 @@ Transform:
   m_GameObject: {fileID: 2732258475333746008}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.2, y: 0.0075, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 2732258475007357964}
   m_RootOrder: 0

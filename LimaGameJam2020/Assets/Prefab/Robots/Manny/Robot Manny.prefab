@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 2189935991960692918}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.1, y: 0.0075, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2189935992673444322}
   m_RootOrder: 0
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 2189935992673444323}
   - component: {fileID: 2899901490396523503}
   m_Layer: 0
-  m_Name: Robot (2)
+  m_Name: Robot Manny
   m_TagString: Robot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -208,7 +208,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ad1f1c2e8ab597b47a4caec3e9ea4385, type: 3}
   miColor: 0
   indice: 0
-  pieza: 4
+  piezaSimetrica: 0
+  jugadorID: 
   nombre: 2
 --- !u!1 &2189935992906155068
 GameObject:
@@ -236,7 +237,7 @@ Transform:
   m_GameObject: {fileID: 2189935992906155068}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.05, y: -0.1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2189935992673444322}
   m_RootOrder: 2
@@ -293,7 +294,7 @@ Transform:
   m_GameObject: {fileID: 2189935993134028202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.05, y: -0.1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2189935992673444322}
   m_RootOrder: 3
@@ -350,7 +351,7 @@ Transform:
   m_GameObject: {fileID: 2189935993732551353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.1, y: 0.0075, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2189935992673444322}
   m_RootOrder: 1

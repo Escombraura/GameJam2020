@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 219482284090958169}
   - component: {fileID: 219482284090958168}
   m_Layer: 0
-  m_Name: Partes_Brazos
+  m_Name: Brazo_Michelle
   m_TagString: Objeto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,10 +96,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.07268246, y: -0.118109}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.76, y: 0.83}
     oldSize: {x: 0.30105263, y: 0.39157894}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
@@ -107,7 +107,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.28356016, y: 0.39621803}
   m_EdgeRadius: 0
 --- !u!114 &219482284090958168
 MonoBehaviour:
@@ -133,7 +133,7 @@ MonoBehaviour:
   miColor: 0
   indice: 0
   piezaSimetrica: 1
-  pieza: 0
+  jugadorID: 
   nombre: 0
 --- !u!1 &5737727850223180467
 GameObject:

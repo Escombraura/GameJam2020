@@ -96,10 +96,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.08652461, y: -0.061565638}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.83, y: 0.73}
     oldSize: {x: 0.25411764, y: 0.28470588}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
@@ -107,7 +107,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.25318047, y: 0.28313124}
   m_EdgeRadius: 0
 --- !u!114 &1042277170328481102
 MonoBehaviour:
@@ -133,7 +133,7 @@ MonoBehaviour:
   miColor: 0
   indice: 0
   piezaSimetrica: 1
-  pieza: 0
+  jugadorID: 
   nombre: 2
 --- !u!1 &4818193532525024933
 GameObject:

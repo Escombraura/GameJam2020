@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2296700548771681278}
   - component: {fileID: 2296700548771681279}
   m_Layer: 0
-  m_Name: Partes_Piernas
+  m_Name: Pierna_Michelle
   m_TagString: Objeto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,10 +96,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.083584756, y: -0.118108936}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.81, y: 0.85}
     oldSize: {x: 0.26526317, y: 0.34947369}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
@@ -107,7 +107,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.26902366, y: 0.35260862}
   m_EdgeRadius: 0
 --- !u!114 &2296700548771681279
 MonoBehaviour:
@@ -133,7 +133,7 @@ MonoBehaviour:
   miColor: 0
   indice: 0
   piezaSimetrica: 1
-  pieza: 2
+  jugadorID: 
   nombre: 0
 --- !u!1 &6013647001469298708
 GameObject:
