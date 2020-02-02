@@ -8,6 +8,8 @@ public class Pintador : MonoBehaviour
     public Sprite[] listaSprite;
     public Colores miColor;
     public int indice;
+    public Pieza pieza;
+    public Nombre nombre;
     private SpriteRenderer miSprite;
 
 
@@ -72,10 +74,11 @@ public enum Pieza
     BrazoDerecho,
     BrazoIzquierdo,
     PiernaDerecha,
-    PiernaIzquierda
+    PiernaIzquierda,
+    Cuerpo
 }
 
-public enum RobotName
+public enum Nombre
 {
     Michelle,
     Hawk,
