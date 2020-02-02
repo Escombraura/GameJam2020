@@ -194,6 +194,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d18fe4212778a894eb5dea848a4fbc90, type: 3}
   - {fileID: 8300000, guid: ae772381cc7106a40a98b6f34a78988c, type: 3}
   - {fileID: 8300000, guid: 85b6c6c34366e1a41a94534ffaf0c733, type: 3}
+  - {fileID: 8300000, guid: 5179765e60e24d44e95d61c2fc84028d, type: 3}
+  - {fileID: 8300000, guid: 2ba1c1fe7d31cd0449bd49a5cce9c91e, type: 3}
+  - {fileID: 8300000, guid: c14187920a4f9af4bad948a8c6ad6987, type: 3}
   backgroundClips:
   - {fileID: 8300000, guid: da30f00090ec190418b06c11408f93fe, type: 3}
   - {fileID: 8300000, guid: 12102c4a17f495847833e187edf912cd, type: 3}
@@ -239,10 +242,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

@@ -40,6 +40,7 @@ public class Pintador : MonoBehaviour
         miSprite.sprite = listaSprite[_value];
     }
 
+    /*
     public Color SetColor(int _value)
     {
         switch (_value)
@@ -53,6 +54,7 @@ public class Pintador : MonoBehaviour
         }
         return colores[_value];
     }
+    */
 }
 
 public enum Colores
