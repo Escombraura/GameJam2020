@@ -15,7 +15,7 @@ public class Pintador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        indice = Random.Range(0, 6);
+        indice = Random.Range(0, listaSprite.Length);
         miSprite = GetComponent<SpriteRenderer>();
         //SetSprite(indice); //Cambiar al momento de usar sprites y no colores
         miSprite.color = SetColor(indice);

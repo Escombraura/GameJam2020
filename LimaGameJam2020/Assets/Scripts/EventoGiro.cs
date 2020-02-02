@@ -11,7 +11,7 @@ public class EventoGiro : Evento {
     private float anguloActual;
     private float angulocomparar;
 
-    public Slider slider;
+    //public Slider slider;
 
     // Update is called once per frame
     void Update () {
@@ -33,7 +33,7 @@ public class EventoGiro : Evento {
                 if (verificador > 5) vuelta++;
                 if (verificador > 0) verificador = 0;
             }
-            slider.value = vuelta;
+            //slider.value = vuelta;
         } else { falla = true; vuelta = (int) objetivo; return; }
     }
 
