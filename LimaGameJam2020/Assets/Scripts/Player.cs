@@ -5,20 +5,22 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     public Transform robot;
-    public Transform eventoGiro;
+    public GameObject[] eventos;
     public string ID;
     public int score;
-    private EventoGiro accesoGiro;
-    public Transform eventoPresion;
-    private EventoPresionar accesoPresion;
+    private Evento accesoEvento;
+    private Transform objetoEvento;
     public float velocidad;
     public bool background = false;
     private Transform hijo;
     public bool enRobot = false;
+    private GameManager gmManager;
     // Start is called before the first frame update
     void Start () {
-        if (eventoGiro) accesoGiro = eventoGiro.GetComponent<EventoGiro> ();
-        if (eventoPresion) accesoPresion = eventoPresion.GetComponent<EventoPresionar> ();
+        // if (eventoGiro) accesoGiro = eventoGiro.GetComponent<EventoGiro> ();
+        // if (eventoPresion) accesoPresion = eventoPresion.GetComponent<EventoPresionar> ();
+
+        if (!gmManager) gmManager = GameObject.Find ("Manager").GetComponent<GameManager> ();
     }
 
     // Update is called once per frame
@@ -32,15 +34,12 @@ public class Player : MonoBehaviour {
             if (enRobot && robot.Find ("Pieza" + ID).childCount == 0) {
                 hijo.parent = robot.Find ("Pieza" + ID);
                 hijo.transform.localPosition = Vector3.zero;
-                hijo.gameObject.name = "brazo";
+                hijo.gameObject.name = ("Ext" + ID);
                 hijo = null;
-                ComenzarGirar ();
-            } else if (enRobot && robot.Find ("Pieza" + ID).childCount == 0) {
-                hijo.parent = robot.Find ("Pieza" + ID);
-                hijo.transform.localPosition = Vector3.zero;
-                hijo.gameObject.name = "pierna";
-                hijo = null;
-                ComenzarPresionar ();
+                int temp = Random.Range (0, eventos.Length);
+                objetoEvento = Instantiate (eventos[temp]).transform;
+                accesoEvento = objetoEvento.GetComponent<Evento> ();
+                ComenzarEvento (temp);
             } else {
                 hijo.parent = null;
                 hijo = null;
@@ -48,20 +47,11 @@ public class Player : MonoBehaviour {
         }
     }
 
-    public void ComenzarGirar () {
-        // if (!eventoGiro.gameObject.activeSelf) {
+    public void ComenzarEvento (int eventoID) {
         background = true;
-        eventoGiro.gameObject.SetActive (true);
+        objetoEvento.gameObject.SetActive (true);
         GetComponent<SpriteRenderer> ().enabled = false;
-        StartCoroutine (FinalizarGiro ());
-        // }
-    }
-
-    public void ComenzarPresionar () {
-        background = true;
-        eventoPresion.gameObject.SetActive (true);
-        GetComponent<SpriteRenderer> ().enabled = false;
-        StartCoroutine (FinalizarPresion ());
+        StartCoroutine (FinalizarEvento (eventoID));
     }
 
     void OnTriggerStay2D (Collider2D other) {
@@ -85,31 +75,35 @@ public class Player : MonoBehaviour {
             enRobot = false;
     }
 
-    IEnumerator FinalizarGiro () {
-        do {
-            yield return new WaitForSeconds (0.1f);
-        } while (accesoGiro.vuelta != accesoGiro.objetivo);
-        if (accesoGiro.falla) {
-            eventoGiro.gameObject.SetActive (false);
-            robot.Find ("Pieza" + ID).transform.Find ("brazo").gameObject.SetActive (false);
-            robot.Find ("Pieza" + ID).transform.Find ("brazo").transform.parent = null;
+    IEnumerator FinalizarEvento (int eventoID) {
+        switch (eventoID) {
+            case 0:
+                do {
+                    yield return new WaitForSeconds (0.1f);
+                } while (accesoEvento.gameObject.GetComponent<EventoGiro> ().vuelta != accesoEvento.objetivo);
+                if (accesoEvento.falla) {
+                    objetoEvento.gameObject.SetActive (false);
+                    robot.Find ("Pieza" + ID).transform.Find ("brazo").gameObject.SetActive (false);
+                    robot.Find ("Pieza" + ID).transform.Find ("brazo").transform.parent = null;
+                }
+                objetoEvento.gameObject.SetActive (false);
+                GetComponent<SpriteRenderer> ().enabled = true;
+                background = false;
+                break;
         }
-        eventoGiro.gameObject.SetActive (false);
-        GetComponent<SpriteRenderer> ().enabled = true;
-        background = false;
     }
 
-    IEnumerator FinalizarPresion () {
-        do {
-            yield return new WaitForSeconds (0.1f);
-        } while (accesoPresion.resta != 0);
-        if (accesoPresion.falla) {
-            eventoPresion.gameObject.SetActive (false);
-            robot.Find ("Pieza" + ID).transform.Find ("pierna").gameObject.SetActive (false);
-            robot.Find ("Pieza" + ID).transform.Find ("pierna").transform.parent = null;
-        }
-        eventoPresion.gameObject.SetActive (false);
-        GetComponent<SpriteRenderer> ().enabled = true;
-        background = false;
-    }
+    // IEnumerator FinalizarPresion () {
+    //     do {
+    //         yield return new WaitForSeconds (0.1f);
+    //     } while (accesoPresion.resta != 0);
+    //     if (accesoPresion.falla) {
+    //         eventoPresion.gameObject.SetActive (false);
+    //         robot.Find ("Pieza" + ID).transform.Find ("pierna").gameObject.SetActive (false);
+    //         robot.Find ("Pieza" + ID).transform.Find ("pierna").transform.parent = null;
+    //     }
+    //     eventoPresion.gameObject.SetActive (false);
+    //     GetComponent<SpriteRenderer> ().enabled = true;
+    //     background = false;
+    // }
 }
