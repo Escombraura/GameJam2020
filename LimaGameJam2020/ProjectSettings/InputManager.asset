@@ -406,7 +406,7 @@ InputManager:
     axis: 3
     joyNum: 3
   - serializedVersion: 3
-    m_Name: 4PVercical2
+    m_Name: 4PVertical2
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
