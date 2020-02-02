@@ -144,13 +144,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   robot: {fileID: 0}
   eventos:
-  - {fileID: 3756288443057467460, guid: 3f8f17280737027418f20ac7009645fe, type: 3}
-  - {fileID: 5273812901362887335, guid: d6ecf24062e8f7648acd75dd4ab092ab, type: 3}
+  - {fileID: 3756288443057467460, guid: 83a08cf1b8db92a4694ab3adcc76177a, type: 3}
+  - {fileID: 5273812901362887335, guid: 11ccae246a12b394e8f3f004cdde9c04, type: 3}
   feedBack:
   - {fileID: 0}
   - {fileID: 0}
   eventID: 0
-  ID: 2P
+  ID: 4P
   score: 0
   velocidad: 2
   background: 0
