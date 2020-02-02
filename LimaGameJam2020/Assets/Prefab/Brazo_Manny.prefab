@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1042277170328481103}
   - component: {fileID: 1042277170328481102}
   m_Layer: 0
-  m_Name: Partes_Brazos (2)
+  m_Name: Brazo_Manny
   m_TagString: Objeto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +100,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.17925926}
+    oldSize: {x: 0.25411764, y: 0.28470588}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -123,13 +123,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jugadores:
   - {fileID: 0}
-  colores:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0.5882353, g: 0, b: 1, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
-  - {r: 1, g: 1, b: 0, a: 1}
-  - {r: 1, g: 0.49019608, b: 0.08235294, a: 1}
   listaSprite:
   - {fileID: 21300000, guid: a8e21c9f44dc28e44b41873168f6a408, type: 3}
   - {fileID: 21300000, guid: 3ab332c05c73fa5449afc945a0765675, type: 3}
@@ -139,6 +132,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7bc6f2b7b65d1d14591ddd62eef1d2b3, type: 3}
   miColor: 0
   indice: 0
+  piezaSimetrica: 1
+  pieza: 0
+  nombre: 2
 --- !u!1 &4818193532525024933
 GameObject:
   m_ObjectHideFlags: 0
