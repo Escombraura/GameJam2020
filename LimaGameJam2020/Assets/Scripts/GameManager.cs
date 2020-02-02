@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
     public GameObject[] Robots;
     public GameObject RobotActual;
     public Player[] Jugadores;
@@ -15,49 +16,89 @@ public class GameManager : MonoBehaviour {
     public GameObject[] partes;
     public GameObject[] piezas;
     public GameObject[] ruta;
+    public Temporizador temporizador;
     public float speed;
+
     // Start is called before the first frame update
-    void Start () {
+    void Start()
+    {
         if (!gm) gm = this;
         estado = GameState.setup;
-        //Llamar timer
-        Invoke ("InitRobot", 5f);
+
+        Debug.Log("llamar");
+        temporizador.Activar(5f);
     }
     // Update is called once per frame
-    void Update () {
-        if (estado == GameState.running) {
-            if (RobotActual.transform.position != puntoFinal.position) {
-                RobotActual.transform.position = Vector3.Lerp (RobotActual.transform.position, puntoFinal.position, Time.deltaTime);
+    void Update()
+    {
+        if (temporizador.GetStage() == 0)
+        {
+            if (temporizador.Finish())
+            {
+                Debug.Log("Robot Colocaldo");
+                InitRobot();
             }
-            for (int i = 0; i <= 11; i++) {
-                if (faja[i].childCount == 0) {
-                    Instantiate (partes[Random.Range (0, partes.Length)], faja[i].position, faja[i].rotation, faja[i]);
+        }
+
+        if (estado == GameState.running)
+        {
+            if (RobotActual.transform.position != puntoFinal.position)
+            {
+                RobotActual.transform.position = Vector3.Lerp(RobotActual.transform.position, puntoFinal.position, Time.deltaTime);
+            }
+            for (int i = 0; i <= 11; i++)
+            {
+                if (faja[i].childCount == 1)
+                {
+                    Instantiate(partes[Random.Range(0, partes.Length)], faja[i].position, faja[i].rotation, faja[i]);
                 }
             }
+
+
             //timer --
+            if (temporizador.GetStage() == 1)
+            {
+                Debug.Log("Holi");
+                temporizador.Activar(15f);
+                if (temporizador.Finish())
+                {
+                    Debug.Log("Se acabó el tiempo");
+                }
+            }
+
+
             // if timer.runsout estado cambia a finish
         }
-        if (estado == GameState.finish) {
-            if (RobotActual.transform.position != puntoAparicion.position) {
-                RobotActual.transform.position = Vector3.Lerp (RobotActual.transform.position, puntoAparicion.position, Time.deltaTime);
-                if (RobotActual.transform.position.y - puntoAparicion.position.y < 2) {
+        if (estado == GameState.finish)
+        {
+            temporizador.SetStage(0);
+
+            if (RobotActual.transform.position != puntoAparicion.position)
+            {
+                RobotActual.transform.position = Vector3.Lerp(RobotActual.transform.position, puntoAparicion.position, Time.deltaTime);
+                if (RobotActual.transform.position.y - puntoAparicion.position.y < 2)
+                {
                     RobotActual = null;
-                    Invoke ("InitRobot", 5f);
+                    //llamar temporizador
+                    //Invoke("InitRobot", 5f);
                 }
             }
         }
     }
-    void SetPlayer () {
-        foreach (Player player in Jugadores) {
+    void SetPlayer()
+    {
+        foreach (Player player in Jugadores)
+        {
             player.robot = RobotActual.transform;
         }
     }
 
-    void InitRobot () {
-        RobotActual = Instantiate (Robots[Random.Range (0, Robots.Length)], puntoAparicion);
+    void InitRobot()
+    {
+        RobotActual = Instantiate(Robots[Random.Range(0, Robots.Length)], puntoAparicion);
         RobotActual.transform.parent = null;
-        SetPlayer ();
-        SoundController.PlayOtherSoundEfect (10);
+        SetPlayer();
+        SoundController.PlayOtherSoundEfect(10);
         estado = GameState.running;
         //llamado timer
     }

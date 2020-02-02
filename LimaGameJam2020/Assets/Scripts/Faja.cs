@@ -7,25 +7,25 @@ public class Faja : MonoBehaviour
     public int ruta;
     public Transform llegada;
     public float velocidad = 0.5f;
+    public Transform direccion;
 
 
 
 
     void Update()
     {
+        //transform.Translate(Vector3.right * Time.deltaTime * velocidad);
+        if (!direccion) return;
 
-        if (transform.childCount >= 1)
+        transform.Translate(direccion.right * Time.deltaTime * velocidad);
+
+        if (transform.childCount >= 2)
         {
-            transform.GetChild(0).transform.eulerAngles = Vector3.zero;
+            transform.GetChild(1).transform.eulerAngles = Vector3.zero;
         }
-
-
-        transform.Translate(Vector3.right * Time.deltaTime * velocidad);
         //ChildLookAt2D();
         if (!llegada) return;
         LookAt2D();
-
-        Debug.Log(Vector3.Distance(transform.position, llegada.position));
 
         if (Vector3.Distance(transform.position, llegada.position) <= 0.5f)
         {
@@ -38,7 +38,7 @@ public class Faja : MonoBehaviour
     {
         Vector3 dir = llegada.position - transform.position;
         float angulo = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angulo, Vector3.forward);
+        direccion.rotation = Quaternion.AngleAxis(angulo, Vector3.forward);
     }
 
     private void ChildLookAt2D()

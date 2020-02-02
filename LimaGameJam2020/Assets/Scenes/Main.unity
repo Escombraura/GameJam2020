@@ -166,6 +166,37 @@ MonoBehaviour:
   ruta: 9
   llegada: {fileID: 382969192}
   velocidad: 0.5
+  direccion: {fileID: 0}
+--- !u!1 &38329697
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 38329698}
+  m_Layer: 0
+  m_Name: Direccion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &38329698
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38329697}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1570523621}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &54714015
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,7 +386,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6, y: 1.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 592665283}
   m_Father: {fileID: 1044170905}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -374,6 +406,7 @@ MonoBehaviour:
   ruta: 4
   llegada: {fileID: 335984362}
   velocidad: 0.5
+  direccion: {fileID: 592665283}
 --- !u!1 &169140008
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,6 +577,7 @@ MonoBehaviour:
   - {fileID: 1618082526}
   - {fileID: 382969191}
   - {fileID: 2054160805}
+  temporizador: {fileID: 528775087}
   speed: 0
 --- !u!1001 &202377364
 PrefabInstance:
@@ -980,6 +1014,7 @@ MonoBehaviour:
   ruta: 7
   llegada: {fileID: 1855715706}
   velocidad: 0.5
+  direccion: {fileID: 0}
 --- !u!1 &332699620
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,6 +1307,7 @@ MonoBehaviour:
   ruta: 2
   llegada: {fileID: 1969719110}
   velocidad: 0.5
+  direccion: {fileID: 0}
 --- !u!1001 &412372342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1446,6 +1482,54 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8de2cd18dfdd77a4eb10bde4362186cc, type: 3}
+--- !u!1 &528775085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 528775086}
+  - component: {fileID: 528775087}
+  m_Layer: 0
+  m_Name: Temporizador
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &528775086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528775085}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.9484903, y: 2.8689876, z: -3.1390624}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &528775087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528775085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b81f0f2419ca62479470278ecc47f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0
+  active: 0
+  ready: 1
+  stage: 0
+  contador: 0
 --- !u!1 &546923212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,6 +1645,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &592665282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 592665283}
+  m_Layer: 0
+  m_Name: Direccion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &592665283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592665282}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 163598324}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &603818192
 GameObject:
   m_ObjectHideFlags: 0
@@ -1607,6 +1721,7 @@ MonoBehaviour:
   ruta: 10
   llegada: {fileID: 2054160806}
   velocidad: 0.5
+  direccion: {fileID: 0}
 --- !u!1 &666927324
 GameObject:
   m_ObjectHideFlags: 0
@@ -3504,6 +3619,7 @@ MonoBehaviour:
   ruta: 5
   llegada: {fileID: 1045135030}
   velocidad: 0.5
+  direccion: {fileID: 0}
 --- !u!1 &1204298564
 GameObject:
   m_ObjectHideFlags: 0
@@ -3586,6 +3702,7 @@ MonoBehaviour:
   ruta: 6
   llegada: {fileID: 778179083}
   velocidad: 0.5
+  direccion: {fileID: 0}
 --- !u!1001 &1248445587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3834,6 +3951,7 @@ MonoBehaviour:
   ruta: 3
   llegada: {fileID: 777572669}
   velocidad: 0.5
+  direccion: {fileID: 0}
 --- !u!1 &1291852634
 GameObject:
   m_ObjectHideFlags: 0
@@ -4318,6 +4436,7 @@ MonoBehaviour:
   ruta: 8
   llegada: {fileID: 1618082527}
   velocidad: 0.5
+  direccion: {fileID: 0}
 --- !u!1 &1436520194
 GameObject:
   m_ObjectHideFlags: 0
@@ -4622,7 +4741,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.6, y: 3.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 38329698}
   m_Father: {fileID: 1044170905}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4641,6 +4761,7 @@ MonoBehaviour:
   ruta: 4
   llegada: {fileID: 335984362}
   velocidad: 0.5
+  direccion: {fileID: 38329698}
 --- !u!1 &1581741385
 GameObject:
   m_ObjectHideFlags: 0
@@ -4687,6 +4808,7 @@ MonoBehaviour:
   ruta: 3
   llegada: {fileID: 777572669}
   velocidad: 0.5
+  direccion: {fileID: 0}
 --- !u!1 &1606498383
 GameObject:
   m_ObjectHideFlags: 0
@@ -5564,6 +5686,7 @@ MonoBehaviour:
   ruta: 6
   llegada: {fileID: 778179083}
   velocidad: 0.5
+  direccion: {fileID: 0}
 --- !u!1 &2054160805
 GameObject:
   m_ObjectHideFlags: 0

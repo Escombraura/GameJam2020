@@ -2,40 +2,65 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class Temporizador
+public class Temporizador : MonoBehaviour
 {
+    public float time = 0f;
+    public bool active = false;
+    public bool ready = true;
+    public int stage = 0;
+    public int contador = 0;
 
-    public static float time = 0f;
-    public static bool active = false;
-    public static bool ready = false;
-    public static int stage = 0;
+    Coroutine corrutina;
 
-
-
-    public static void Active(float _time)
+    public void Activar(float _time)
     {
         if (ready == false) return;
-
+        ready = false;
         active = true;
         time = _time;
+        corrutina = StartCoroutine(Wait());
     }
 
-    public static void Finish()
+    public bool Finish()
     {
-        ready = false;
-        stage++;
+        if (ready)
+        {
+            ready = true;
+            stage++;
+            contador = 0;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
-    public static void EndMesh()
+    public int GetStage()
     {
-        stage = 0;
+        return stage;
+    }
+
+    public void SetStage(int _value)
+    {
+        stage = _value;
+    }
+
+    public void StopTimer()
+    {
+        ready = true;
+        StopCoroutine(corrutina);
+
     }
 
 
-    static IEnumerator Wait()
+    public IEnumerator Wait()
     {
-        yield return new WaitForSeconds(time);
+        while (contador <= time)
+        {
+            yield return new WaitForSeconds(1);
+            contador++;
+        }
         ready = true;
     }
-
 }
