@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-guid: 2b071b4bb36bfb74b97eddb10b4fdce1
+guid: fd984aab480bbe243af4ccbbff204c54
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 3747184654470206406
-    second: claw
-  - first:
-      213: 6011972188671539573
-    second: light-color
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -46,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -90,53 +84,11 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: claw
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 8
-        width: 46
-        height: 92
-      alignment: 9
-      pivot: {x: 0.6928791, y: 0.86410815}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ecf5cbc8737bfde46b908863d3f08ac1
-      internalID: 3747184654470206406
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: light-color
-      rect:
-        serializedVersion: 2
-        x: 78
-        y: 11
-        width: 51
-        height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 40df7422aa54d42409ee14fee3d3ffcd
-      internalID: 6011972188671539573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 86f477e9942239848918ac715b967ed7
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

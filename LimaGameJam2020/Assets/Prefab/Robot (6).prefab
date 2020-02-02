@@ -208,6 +208,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d3e1e17fe023cd842984669cb58f87bc, type: 3}
   miColor: 0
   indice: 0
+  pieza: 4
+  nombre: 6
 --- !u!1 &4748795012225178240
 GameObject:
   m_ObjectHideFlags: 0
