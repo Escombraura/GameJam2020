@@ -41,7 +41,7 @@ public class Player : MonoBehaviour {
                 SoundController.PlayOtherSoundEfect (Random.Range (4, 7));
 
                 hijo.parent = robot.Find ("Pieza" + ID);
-                hijo.transform.GetChild (0).transform.position = robot.Find ("Pieza" + ID).transform.position;
+                hijo.position = robot.Find ("Pieza" + ID).transform.position;
                 hijo.gameObject.name = ("Ext" + ID);
                 hijo = null;
                 objetoEvento = Instantiate (eventos[eventID]).transform;
