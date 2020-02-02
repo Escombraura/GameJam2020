@@ -191,7 +191,6 @@ MonoBehaviour:
   tiempoLimite: 5
   verificador: 0
   vuelta: 0
-  slider: {fileID: 1189379267}
 --- !u!4 &21109033
 Transform:
   m_ObjectHideFlags: 0
@@ -417,7 +416,6 @@ MonoBehaviour:
   valorActual: 0
   adicion: 0.8
   resta: 4.5
-  slider: {fileID: 1558482114}
 --- !u!4 &422902280
 Transform:
   m_ObjectHideFlags: 0
@@ -1059,6 +1057,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   robot: {fileID: 1512897586}
   eventos: []
+  feedBack: []
+  eventID: 0
   ID: 2P
   score: 0
   velocidad: 2
@@ -3060,6 +3060,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666616201796286432, guid: 0a2735624281b924a914b084f49184a2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666616201082031597, guid: 0a2735624281b924a914b084f49184a2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a2735624281b924a914b084f49184a2, type: 3}
