@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 340235241687839928}
   m_Layer: 0
   m_Name: Robot
-  m_TagString: Untagged
+  m_TagString: Robot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -451,13 +451,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugadores: []
-  colores:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0.5882353, g: 0, b: 1, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
-  - {r: 1, g: 1, b: 0, a: 1}
-  - {r: 1, g: 0.49019608, b: 0.08235294, a: 1}
   listaSprite:
   - {fileID: 21300000, guid: d8c0197895f98ae4fb34e497433998af, type: 3}
   - {fileID: 21300000, guid: de5f9f5b882d9a54bb2d169a580f1997, type: 3}
