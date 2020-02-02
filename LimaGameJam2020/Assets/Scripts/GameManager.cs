@@ -19,6 +19,13 @@ public class GameManager : MonoBehaviour
     public float speed;
     public float globalScore;
 
+    public Nombre[] verificadorNombre;
+    public string[] verificadorPiezas;
+    public int[] verificadorColor;
+    private float multiplicador;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -106,4 +113,65 @@ public class GameManager : MonoBehaviour
         //llamado timer
     }
 
+    public void AddGlobalScore(int _value)
+    {
+        globalScore += _value;
+    }
+
+    public void AddPlayerData(string _ID, Nombre _nombre)
+    {
+        switch (_ID)
+        {
+            case "": verificadorNombre[0] = _nombre; break;
+            case "2P": verificadorNombre[1] = _nombre; break;
+            case "3P": verificadorNombre[2] = _nombre; break;
+            case "4P": verificadorNombre[3] = _nombre; break;
+        }
+    }
+    public void AddPlayerData(string _ID, string _piezaID)
+    {
+        switch (_ID)
+        {
+            case "": verificadorPiezas[0] = _piezaID; break;
+            case "2P": verificadorPiezas[1] = _piezaID; break;
+            case "3P": verificadorPiezas[2] = _piezaID; break;
+            case "4P": verificadorPiezas[3] = _piezaID; break;
+        }
+    }
+
+    public void AddPlayerData(string _ID, int _color)
+    {
+        switch (_ID)
+        {
+            case "": verificadorColor[0] = _color; break;
+            case "2P": verificadorColor[1] = _color; break;
+            case "3P": verificadorColor[2] = _color; break;
+            case "4P": verificadorColor[3] = _color; break;
+        }
+    }
+
+
+    public void BonusScore()
+    {
+        multiplicador = 1;
+        for (int i = 0; i < 4; i++)
+        {
+            for (int j = 0; j < 5; i++)
+            {
+                if (i != j)
+                {
+                    if (verificadorColor[i] == verificadorColor[j])
+                        multiplicador++;
+                    if (verificadorNombre[i] == verificadorNombre[j])
+                        multiplicador++;
+                    if (verificadorPiezas[i] == verificadorPiezas[j])
+                        multiplicador++;
+                }
+            }
+        }
+        multiplicador = multiplicador / 10f;
+        Debug.Log(globalScore);
+        globalScore = globalScore * multiplicador;
+        Debug.Log(globalScore);
+    }
 }
