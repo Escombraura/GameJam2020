@@ -13,12 +13,12 @@ public class Faja : MonoBehaviour
 
     void Update()
     {
-        /*
+
         if (transform.childCount >= 1)
         {
-            transform.GetChild(0).transform.rotation
+            transform.GetChild(0).transform.eulerAngles = Vector3.zero;
         }
-        */
+
 
         transform.Translate(Vector3.right * Time.deltaTime * velocidad);
         //ChildLookAt2D();
