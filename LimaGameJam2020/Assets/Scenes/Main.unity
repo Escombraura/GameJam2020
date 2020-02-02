@@ -806,6 +806,11 @@ PrefabInstance:
       propertyPath: feedBack.Array.data[1]
       value: 
       objectReference: {fileID: 1566564244}
+    - target: {fileID: 6095692989401010551, guid: 995d2c8633134d745a344903be123a6a,
+        type: 3}
+      propertyPath: texto
+      value: 
+      objectReference: {fileID: 2849481339600533095}
     - target: {fileID: 6095692989401010553, guid: 995d2c8633134d745a344903be123a6a,
         type: 3}
       propertyPath: m_SortingOrder
@@ -3772,6 +3777,11 @@ PrefabInstance:
       propertyPath: feedBack.Array.data[1]
       value: 
       objectReference: {fileID: 1566564244}
+    - target: {fileID: 6095692989401010551, guid: 995d2c8633134d745a344903be123a6a,
+        type: 3}
+      propertyPath: texto
+      value: 
+      objectReference: {fileID: 2849481339101080981}
     - target: {fileID: 6095692989401010553, guid: 995d2c8633134d745a344903be123a6a,
         type: 3}
       propertyPath: m_SortingOrder
@@ -5589,6 +5599,11 @@ PrefabInstance:
       propertyPath: ID
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6095692989401010551, guid: 995d2c8633134d745a344903be123a6a,
+        type: 3}
+      propertyPath: texto
+      value: 
+      objectReference: {fileID: 2849481339562377988}
     - target: {fileID: 6095692989401010553, guid: 995d2c8633134d745a344903be123a6a,
         type: 3}
       propertyPath: m_SortingOrder
@@ -6230,6 +6245,11 @@ PrefabInstance:
       propertyPath: feedBack.Array.data[1]
       value: 
       objectReference: {fileID: 1566564244}
+    - target: {fileID: 6095692989401010551, guid: 995d2c8633134d745a344903be123a6a,
+        type: 3}
+      propertyPath: texto
+      value: 
+      objectReference: {fileID: 2849481338756817653}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 995d2c8633134d745a344903be123a6a, type: 3}
 --- !u!114 &2102911413 stripped
