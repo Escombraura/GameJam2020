@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 6
   m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 0.33922213, g: 0.6731455, b: 0.7264151, a: 1}
   m_FlipX: 0
@@ -143,10 +143,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   robot: {fileID: 0}
-  eventoGiro: {fileID: 0}
-  ID: 
+  eventos:
+  - {fileID: 3756288443057467460, guid: 3f8f17280737027418f20ac7009645fe, type: 3}
+  - {fileID: 5273812901362887335, guid: d6ecf24062e8f7648acd75dd4ab092ab, type: 3}
+  feedBack:
+  - {fileID: 0}
+  - {fileID: 0}
+  eventID: 0
+  ID: 2P
   score: 0
-  eventoPresion: {fileID: 0}
   velocidad: 2
   background: 0
+  hijo: {fileID: 0}
   enRobot: 0
