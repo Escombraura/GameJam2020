@@ -1611,44 +1611,13 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2296700548771681276, guid: b394998ee5bedec46a9799bf30bd3eea,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b394998ee5bedec46a9799bf30bd3eea, type: 3}
---- !u!1 &1030624018 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7357505402562208351, guid: b394998ee5bedec46a9799bf30bd3eea,
-    type: 3}
-  m_PrefabInstance: {fileID: 1030624017}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1030624019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030624018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8b1591b6874d184aaecbe0b239f2b03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jugadores:
-  - {fileID: 0}
-  colores:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0.5882353, g: 0, b: 1, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
-  - {r: 1, g: 1, b: 0, a: 1}
-  - {r: 1, g: 0.49019608, b: 0.08235294, a: 1}
-  listaSprite:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  miColor: 0
-  indice: 0
 --- !u!1001 &1055930483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1721,44 +1690,13 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2296700548771681276, guid: b394998ee5bedec46a9799bf30bd3eea,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b394998ee5bedec46a9799bf30bd3eea, type: 3}
---- !u!1 &1055930484 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7357505402562208351, guid: b394998ee5bedec46a9799bf30bd3eea,
-    type: 3}
-  m_PrefabInstance: {fileID: 1055930483}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1055930485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055930484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8b1591b6874d184aaecbe0b239f2b03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jugadores:
-  - {fileID: 0}
-  colores:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0.5882353, g: 0, b: 1, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
-  - {r: 1, g: 1, b: 0, a: 1}
-  - {r: 1, g: 0.49019608, b: 0.08235294, a: 1}
-  listaSprite:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  miColor: 0
-  indice: 0
 --- !u!1001 &1248445587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1915,16 +1853,6 @@ PrefabInstance:
     - target: {fileID: 853864542083509081, guid: 8de2cd18dfdd77a4eb10bde4362186cc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 853864542112396659, guid: 8de2cd18dfdd77a4eb10bde4362186cc,
-        type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 853864542112396659, guid: 8de2cd18dfdd77a4eb10bde4362186cc,
-        type: 3}
-      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2137,6 +2065,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296700548771681276, guid: b394998ee5bedec46a9799bf30bd3eea,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b394998ee5bedec46a9799bf30bd3eea, type: 3}
@@ -2914,42 +2847,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2012193867 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7357505402562208351, guid: b394998ee5bedec46a9799bf30bd3eea,
-    type: 3}
-  m_PrefabInstance: {fileID: 1300464853}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2012193868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2012193867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8b1591b6874d184aaecbe0b239f2b03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jugadores:
-  - {fileID: 0}
-  colores:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0.5882353, g: 0, b: 1, a: 1}
-  - {r: 0, g: 0, b: 1, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
-  - {r: 1, g: 1, b: 0, a: 1}
-  - {r: 1, g: 0.49019608, b: 0.08235294, a: 1}
-  listaSprite:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  miColor: 0
-  indice: 0
 --- !u!1001 &2102911412
 PrefabInstance:
   m_ObjectHideFlags: 0

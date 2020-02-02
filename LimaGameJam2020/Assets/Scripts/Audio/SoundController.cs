@@ -60,6 +60,19 @@ public static class SoundController
         _miAudio.volume = volume;
         _miAudio.Play();
     }
+
+    public static void PlayOtherSoundEfect(int _value, float _pitchValue)
+    {
+        GameObject _objeto = Object.Instantiate(soundManager.efectoExtra);
+        _objeto.transform.SetParent(soundManager.gameObject.transform);
+        AudioSource _miAudio = _objeto.GetComponent<AudioSource>();
+
+        if (_value >= soundManager.audioClips.Length) return;
+        _miAudio.pitch = _pitchValue;
+        _miAudio.clip = soundManager.audioClips[_value];
+        _miAudio.volume = volume;
+        _miAudio.Play();
+    }
 }
 
 

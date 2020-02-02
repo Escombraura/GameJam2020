@@ -30,7 +30,8 @@ public class EventoPresionar : Evento
             if (ControladorMando.PressB(ID))
             {
                 valorActual += adicion;
-                SoundController.PlayOtherSoundEfect(11);
+                Random.seed = (int)Time.deltaTime;
+                SoundController.PlayOtherSoundEfect(16, Random.Range(0.4f, 0.7f));
 
                 resta = valorActual >= 10 ? 0 : resta;
             }
