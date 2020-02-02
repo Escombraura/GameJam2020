@@ -9,7 +9,7 @@ public class Pintador : MonoBehaviour
     public Colores miColor;
     public int indice;
     public bool piezaSimetrica;
-    public Pieza pieza;
+    public string jugadorID;
     public Nombre nombre;
     private SpriteRenderer miSprite;
 
@@ -68,15 +68,6 @@ public enum Colores
     Verde,
     Amarillo,
     Naranja
-}
-
-public enum Pieza
-{
-    BrazoDerecho,
-    BrazoIzquierdo,
-    PiernaDerecha,
-    PiernaIzquierda,
-    Cuerpo
 }
 
 public enum Nombre

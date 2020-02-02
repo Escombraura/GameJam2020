@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] ruta;
     public Temporizador temporizador;
     public float speed;
+    public float globalScore;
 
     // Start is called before the first frame update
     void Start()
