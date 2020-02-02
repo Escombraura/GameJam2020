@@ -8,6 +8,7 @@ public class Pintador : MonoBehaviour
     public Sprite[] listaSprite;
     public Colores miColor;
     public int indice;
+    public bool piezaSimetrica;
     public Pieza pieza;
     public Nombre nombre;
     private SpriteRenderer miSprite;
