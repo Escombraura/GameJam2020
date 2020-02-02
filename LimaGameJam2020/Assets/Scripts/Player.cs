@@ -71,6 +71,9 @@ public class Player : MonoBehaviour
         background = true;
         objetoEvento.gameObject.SetActive(true);
         GetComponent<SpriteRenderer>().enabled = false;
+        Debug.Log(feedBack.Length);
+        Debug.Log(eventID);
+
         feedBack[eventID].transform.Find(ID + "FeedBack").gameObject.SetActive(true);
         StartCoroutine(FinalizarEvento(eventoID));
     }
