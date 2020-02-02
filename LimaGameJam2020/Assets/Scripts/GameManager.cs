@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     public enum GameState { setup, running, finish }
     public GameState estado;
     public GameObject[] partes;
-    public GameObject[] piezas;
     public GameObject[] ruta;
     public Temporizador temporizador;
     public float speed;

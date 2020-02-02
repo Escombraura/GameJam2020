@@ -66,3 +66,22 @@ public enum Colores
     Amarillo,
     Naranja
 }
+
+public enum Pieza
+{
+    BrazoDerecho,
+    BrazoIzquierdo,
+    PiernaDerecha,
+    PiernaIzquierda
+}
+
+public enum RobotName
+{
+    Michelle,
+    Hawk,
+    Manny,
+    Bob,
+    Alfred,
+    Emilio,
+    Timmy
+}
