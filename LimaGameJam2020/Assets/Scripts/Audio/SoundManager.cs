@@ -21,7 +21,7 @@ public class SoundManager : MonoBehaviour
     void Start()
     {
         SoundController.AddSoundManager(this);
-        StartCoroutine(ReproductorAleatoreo());
+        //StartCoroutine(ReproductorAleatoreo());
     }
 
     IEnumerator ReproductorAleatoreo()
