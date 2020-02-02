@@ -536,6 +536,10 @@ MonoBehaviour:
   - {fileID: 3666616202241654440, guid: 0a2735624281b924a914b084f49184a2, type: 3}
   - {fileID: 2615990820511411217, guid: 1280c21d1c3311145b53ed0d9ea5b96d, type: 3}
   - {fileID: 2189935992673444351, guid: cfb7054138df9624392ea8e32d30ca1f, type: 3}
+  - {fileID: 2732258475007357969, guid: 20f1cc966404611408fdad898de5613b, type: 3}
+  - {fileID: 3118316602364934865, guid: 48a50e3d14681ce428648f9d901cc09f, type: 3}
+  - {fileID: 4383479672906905334, guid: d8b7beda73a27884cb6bad22a7d16cc8, type: 3}
+  - {fileID: 4748795011858120515, guid: b19f46dc6439b1240841752b153d591d, type: 3}
   RobotActual: {fileID: 0}
   Jugadores:
   - {fileID: 1824634532}
@@ -5301,7 +5305,7 @@ PrefabInstance:
     - target: {fileID: 618153291661433311, guid: b01a4aae575edbb47b43b7b57324a793,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 6
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 618153291661433311, guid: b01a4aae575edbb47b43b7b57324a793,
         type: 3}
